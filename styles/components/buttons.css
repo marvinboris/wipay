@@ -1,0 +1,27 @@
+.btn {
+    @apply inline-flex w-[192px] h-[60px] items-center justify-center rounded-full text-sm focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 transition-all duration-200;
+}
+
+.btn-icon {
+    @apply justify-between pl-5 pr-10 hover:pl-10 hover:pr-5;
+}
+
+.btn-sm {
+    @apply w-[139px] h-[46px];
+}
+
+.btn-primary {
+    @apply bg-primary-400 text-white hover:text-secondary-100 active:text-primary-400/10 focus-visible:outline-primary-400;
+}
+
+.btn-white {
+    @apply bg-white text-primary-400 focus-visible:outline-white;
+}
+
+.btn-green {
+    @apply bg-green-600 text-white hover:text-secondary-100 active:text-green-600/10 focus-visible:outline-green-600;
+}
+
+.btn-night {
+    @apply bg-night text-white hover:text-secondary-100 active:text-night/10 focus-visible:outline-night;
+}
