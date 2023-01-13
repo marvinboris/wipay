@@ -57,7 +57,13 @@ const HomePage: NextPageWithLayout = () => {
 
                 <div className='relative flex justify-center items-center flex-none w-11 h-11 z-0'>
                   <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" className='absolute inset-0 -z-10 -rotate-[85deg]'>
-                    <circle cx={70} cy={70} r={70} className="w-full h-full fill-none stroke-primary-400 stroke-[10] scale-90 origin-center" strokeLinecap='round' strokeDasharray={440} strokeDashoffset={440 * (1 - 81 / 100)} />
+                    <defs>
+                      <linearGradient id="circular-progress-bar-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#96B835" />
+                        <stop offset="100%" stop-color="#E6F356" />
+                      </linearGradient>
+                    </defs>
+                    <circle cx={70} cy={70} r={70} stroke="url(#circular-progress-bar-gradient)" className="w-full h-full fill-none stroke-[10] scale-90 origin-center" strokeLinecap='round' strokeDasharray={440} strokeDashoffset={440 * (1 - 81 / 100)} />
                   </svg>
                   <div className="text-xs">81%</div>
                 </div>
