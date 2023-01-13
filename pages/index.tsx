@@ -55,7 +55,12 @@ const HomePage: NextPageWithLayout = () => {
                   <div className="ml-3"><ExclamationCircleIcon className='text-sky w-6' /></div>
                 </div>
 
-                <div></div>
+                <div className='relative flex justify-center items-center flex-none w-11 h-11 z-0'>
+                  <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" className='absolute inset-0 -z-10 -rotate-[85deg]'>
+                    <circle cx={70} cy={70} r={70} className="w-full h-full fill-none stroke-primary-400 stroke-[10] scale-90 origin-center" strokeLinecap='round' strokeDasharray={440} strokeDashoffset={440 * (1 - 81 / 100)} />
+                  </svg>
+                  <div className="text-xs">81%</div>
+                </div>
               </div>
 
               <div className="flex items-end justify-between mt-3.5">
