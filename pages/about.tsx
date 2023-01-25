@@ -22,7 +22,7 @@ const AboutPage: NextPageWithLayout = () => {
                     <h2 className="text-[25px] font-bold text-white/90">What is Wipay ?</h2>
 
                     <div className="rounded-[35px] h-[194px] relative mt-8">
-                        <Image src="/images/candles.png" alt="Candles" layout='fill' />
+                        <Image src="/images/candles.png" alt="Candles" fill />
                     </div>
 
                     <p className="mt-8">

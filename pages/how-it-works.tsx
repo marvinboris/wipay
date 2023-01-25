@@ -57,7 +57,7 @@ const HowItWorksPage: NextPageWithLayout = () => {
                     <h2 className="text-[25px] font-bold text-white/90 pl-3">How it works</h2>
 
                     <div className="rounded-[35px] h-[194px] relative mt-8">
-                        <Image src="/images/desk.png" alt="Candles" layout='fill' />
+                        <Image src="/images/desk.png" alt="Candles" fill />
                     </div>
 
                     <p className="mt-8 space-y-3.5">
@@ -70,6 +70,23 @@ const HowItWorksPage: NextPageWithLayout = () => {
 
                     <div className="mt-8 space-y-3.5">
                         {whyUsContent}
+                    </div>
+                </section>
+
+                <section className="mt-12">
+                    <div className="rounded-[35px] bg-black/20 pt-[53px] px-8 pb-[35px]">
+                        <h3 className="text-[25px] font-bold text-white/90">Have questions ?</h3>
+
+                        <p className="mt-8">
+                            Feel free to contact us with any problems. We will get back to you as soon as possible.
+                        </p>
+
+                        <div className="mt-[100px]">
+                            <button className="h-[61px] pl-[35px] pr-[19.5px] bg-[#8EAD12] rounded-[14px] inline-flex items-center justify-center">
+                                <div className="font-medium">Contact us</div>
+                                <div className='ml-3'><SvgIcon icon='paper-plane' width={24} /></div>
+                            </button>
+                        </div>
                     </div>
                 </section>
             </div>

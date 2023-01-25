@@ -1,12 +1,14 @@
-import { ArrowRightIcon, ExclamationCircleIcon } from '@heroicons/react/24/outline'
+import { Popover } from '@headlessui/react'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
 import { ReactElement } from 'react'
 
 import { NextPageWithLayout } from './_app'
 
-import Layout, { Head } from '../components/frontend/navigation/Layout'
-import SvgIcon from '../components/ui/svg-icon'
-import Image from 'next/image'
 import { classNames } from '../app/helpers/utils'
+
+import Layout, { Head } from '../components/frontend/navigation/Layout'
+import SmartContractCall from '../components/frontend/ui/smart-contract-call'
+import SvgIcon from '../components/ui/svg-icon'
 
 const params = {
     link: '/about',
@@ -74,10 +76,12 @@ const Pack = ({ type, amount, bonus }: PackProps) => <div className='rounded-[35
     </div>
 
     <div className="mt-11">
-        <button className="h-[61px] bg-blue-700 text-white rounded-[14px] flex items-center justify-center w-full">
-            <div className="font-medium">Activate pack</div>
-            <div className='ml-3'><ArrowRightIcon className='w-6' /></div>
-        </button>
+        <SmartContractCall>
+            <Popover.Button className="h-[61px] bg-blue-700 text-white rounded-[14px] flex items-center justify-center w-full">
+                <div className="font-medium">Activate pack</div>
+                <div className='ml-3'><ArrowRightIcon className='w-6' /></div>
+            </Popover.Button>
+        </SmartContractCall>
     </div>
 </div>
 
