@@ -166,8 +166,6 @@ type ToolbarProps = {
 }
 
 export default function Toolbar({ home }: ToolbarProps) {
-    const { back } = useRouter()
-
     return <>
         <header className="w-full top-0 z-40 bg-secondary-900">
             <div className="container">
