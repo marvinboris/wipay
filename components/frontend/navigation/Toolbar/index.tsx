@@ -1,5 +1,4 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { ChevronLeftIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ComponentProps, ReactNode } from 'react'
@@ -120,7 +119,7 @@ const NavItem = (item: { name: ReactNode, href: string, icon: (props: ComponentP
         <div className="w-1.5 h-1.5 rounded-full bg-blue-700" />
     </div>
 
-    return <Link href={item.href} onClick={close} className={classNames("text-secondary-900 flex flex-col items-center space-y-2 relative", item.center ? "self-start -top-[41px]" : "")}>
+    return <Link href={item.href} className={classNames("text-secondary-900 flex flex-col items-center space-y-2 relative", item.center ? "self-start -top-[41px]" : "")}>
         {item.center ? <div>
             <div className="w-[82px] flex items-center justify-center h-[82px] rounded-full bg-[#D9D9D9]">
                 <div className={classNames("flex items-center justify-center bg-gradient-to-tr w-[70px] h-[70px] rounded-full shadow-lg shadow-[#1445A14D] backdrop-blur-2xl transition-all duration-200", active ? "from-[#9747FF] to-[#3982F0]" : "from-[#113F9A33] to-[#3982F033]")}>
