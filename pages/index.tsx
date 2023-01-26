@@ -7,6 +7,7 @@ import Layout, { Head } from '../components/frontend/navigation/Layout'
 import SvgIcon from '../components/ui/svg-icon'
 import { classNames } from '../app/helpers/utils'
 import { Popover, Transition } from '@headlessui/react'
+import Number from '../components/ui/number'
 
 const params = {
   link: '/',
@@ -201,7 +202,7 @@ const DashboardPage: NextPageWithLayout = () => {
               <div className="flex items-end justify-between mt-[13px]">
                 <div>
                   <div className='flex leading-none'>
-                    <div className='text-[35px] text-white font-bold'>{harvesting ? "0.000" : "2.829"}</div>
+                    <div className='text-[35px] text-white font-bold'>{harvesting ? <Number from={2.829} to={0} /> : <Number from={0} to={2.829} />}</div>
                     <div className='text-lg text-white/75 ml-1'>BNB</div>
                   </div>
 
@@ -219,35 +220,6 @@ const DashboardPage: NextPageWithLayout = () => {
                       <span className="text-sm font-medium h-[22px] text-white">Pending harvest</span>
                       <div className="ml-2"><div className="animate-spin"><SvgIcon icon='spinner' width={22} /></div></div>
                     </div>
-                  </button>
-                </div>
-
-                <div><SvgIcon icon='harvest' width={62} /></div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-3.5">
-            <div className="rounded-[25px] bg-black/20 pt-6 pb-5 pl-[35px] pr-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-end">
-                  <div className="text-lg">BWAX to scoop</div>
-                  <div className="ml-3"><ExclamationCircleIcon className='text-sky w-6' /></div>
-                </div>
-
-                <div></div>
-              </div>
-
-              <div className="flex items-end justify-between mt-10">
-                <div>
-                  <div>
-                    <div className='text-[35px] text-white font-bold'>3193910.32</div>
-                    <div className='text-sm text-white/75'>Next scoop in 23:13:54</div>
-                  </div>
-
-                  <button className="mt-[18px] bg-gradient-to-r from-[#3A3E97] to-[#DE51EA] flex items-center rounded-[10px] text-white h-11 px-[25px]">
-                    <span className="text-sm font-medium h-[22px]">Scoop BWAX</span>
-                    <div className="ml-2"><SvgIcon icon='2-coins-white' width={22} /></div>
                   </button>
                 </div>
 

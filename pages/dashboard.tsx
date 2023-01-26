@@ -1,14 +1,15 @@
-import { Popover, Transition } from '@headlessui/react'
-import { ArrowLeftIcon, ArrowRightOnRectangleIcon, DocumentDuplicateIcon, ExclamationCircleIcon, ExclamationTriangleIcon, ShieldCheckIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Fragment, ReactElement, ReactNode, useState } from 'react'
+import { Popover } from '@headlessui/react'
+import { ArrowRightOnRectangleIcon, DocumentDuplicateIcon, ExclamationCircleIcon } from '@heroicons/react/24/outline'
+import { ReactElement, useState } from 'react'
 
 import { NextPageWithLayout } from './_app'
 
 import { classNames } from '../app/helpers/utils'
 
 import Layout, { Head } from '../components/frontend/navigation/Layout'
-import SvgIcon from '../components/ui/svg-icon'
 import SmartContractCall from '../components/frontend/ui/smart-contract-call'
+import Number from '../components/ui/number'
+import SvgIcon from '../components/ui/svg-icon'
 
 const params = {
   link: '/dashboard',
@@ -156,9 +157,8 @@ const HomePage: NextPageWithLayout = () => {
               <div className="flex items-end justify-between mt-3.5">
                 <div>
                   <div className="relative leading-none">
-                    <div className={classNames('text-[35px] text-white font-bold transition-all duration-200', scooping ? "opacity-0" : "opacity-100")}>2892872400.82</div>
-                    <div className={classNames('absolute flex items-start top-0 transition-all duration-200', scooping ? "opacity-100" : "opacity-0")}>
-                      <div className='text-[35px] text-white font-bold'>0.000</div>
+                    <div className='flex items-start'>
+                      <div className='text-[35px] text-white font-bold'>{scooping ? <Number from={2892872400.82} to={0} /> : <Number from={0} to={2892872400.82} />}</div>
                       <div className='ml-1 text-white/75'>BWAX</div>
                     </div>
                   </div>
