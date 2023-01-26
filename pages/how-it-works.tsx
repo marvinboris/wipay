@@ -100,7 +100,7 @@ const HowItWorksPage: NextPageWithLayout = () => {
                     {({ open }) => (
                         <>
                             {open ? <Popover.Button className="absolute z-50 top-6 right-8 flex items-center justify-center focus:outline-none">
-                                <div>Close</div>
+                                <div className='text-sm'>Close</div>
                                 <div className="w-[60px] h-[60px] rounded-full bg-black/20 ml-3 flex items-center justify-center">
                                     <XMarkIcon className="w-5" />
                                 </div>

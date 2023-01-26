@@ -130,7 +130,7 @@ const DashboardPage: NextPageWithLayout = () => {
                         <div className="absolute top-0 left-0 w-full pt-8">
                           <div className="container flex justify-end">
                             <Popover.Button className="flex items-center justify-center focus:outline-none">
-                              <div>Close</div>
+                              <div className='text-sm font-medium'>Close</div>
                               <div className="w-[60px] h-[60px] rounded-full bg-black/20 ml-3 flex items-center justify-center">
                                 <XMarkIcon className="w-5" />
                               </div>
