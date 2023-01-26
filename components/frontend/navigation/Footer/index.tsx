@@ -7,7 +7,7 @@ interface FooterProps {
 }
 
 export default function Footer({ action }: FooterProps) {
-    return <footer className="bg-black/30">
+    return <footer className="bg-black/30 z-40">
         <div>
             <div className="container pt-[29px] pb-[27px]">
                 <h2 className="text-[25px] text-white/90 font-bold">Join us on social media</h2>
