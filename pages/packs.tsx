@@ -102,7 +102,7 @@ const AboutPage: NextPageWithLayout = () => {
                 <section>
                     <h2 className="text-[25px] font-bold text-white/90">Scooper packs</h2>
 
-                    <div className="mt-11 space-y-3.5">
+                    <div className="mt-8 space-y-3.5">
                         {packsContent}
                     </div>
                 </section>

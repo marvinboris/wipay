@@ -1,4 +1,4 @@
-import { ArrowTopRightOnSquareIcon, ExclamationCircleIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ArrowTopRightOnSquareIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Fragment, ReactElement, ReactNode } from 'react'
 
 import { NextPageWithLayout } from './_app'
@@ -59,8 +59,8 @@ const HowItWorksPage: NextPageWithLayout = () => {
         <Head {...params} />
         <main>
             <div className="container pb-[190px]">
-                <section className="pt-[11px]">
-                    <h2 className="text-[25px] font-bold text-white/90 pl-3">How it works</h2>
+                <section>
+                    <h2 className="text-[25px] font-bold text-white/90">How it works</h2>
 
                     <div className="rounded-[35px] h-[194px] relative mt-8">
                         <Image src="/images/desk.png" alt="Candles" fill />
