@@ -35,18 +35,18 @@ const Pack = ({ type, amount, bonus }: PackProps) => <div className='rounded-[35
                                         ""
             )}>
                 <div className="w-full h-full bg-secondary-900 rounded-[14px]">
-                    <div className="w-full h-full bg-black/10 flex items-center px-[18px]">
+                    <div className="w-full h-full bg-black/10 flex items-center px-2">
                         <div className='flex-none w-7 h-full relative flex items-center justify-center overflow-hidden'>
                             <div className={classNames('absolute', type === 'diamond' ? 'w-[58px] pt-5' : 'w-7')}><SvgIcon icon={type} width={type === 'diamond' ? 58 : 28} /></div>
                         </div>
-                        <div className={classNames("ml-[13px] font-bold", type === 'gold' ? "text-[#EAC24E]" : "text-white")}><span className="capitalize">{type}</span> pack</div>
+                        <div className={classNames("ml-2 font-bold truncate", type === 'gold' ? "text-[#EAC24E]" : "text-white")}><span className="capitalize">{type}</span> pack</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div className='ml-[21px]'>
-            <div className="bg-black/20 rounded-[14px] w-[104px] h-[60px] flex items-center pl-[27px]">
+        <div className='ml-4'>
+            <div className="bg-black/20 rounded-[14px] w-24 h-[60px] flex items-center pl-4">
                 <div>
                     <div className="text-lg text-white font-bold">{amount}</div>
                     <div className="text-sm">BUSD</div>

@@ -25,8 +25,10 @@ const WhyUs = ({ children }: { children: ReactNode }) => <div className="flex it
 </div>
 
 const Link = (props: { icon: string, social?: boolean, label: ReactNode }) => <div className='h-[60px] rounded-full bg-[#4A55681A] p-2 flex items-center'>
-    <SvgIcon icon={props.icon} width={44} />
-    <div className="ml-4 text-sm leading-none">{props.social ? <><span className='font-bold'>{props.label}</span> - WiPayOfficial</> : props.label}</div>
+    <div className='w-11 h-11 relative'>
+        <div className={props.social ? "" : "scale-[1.454545] origin-center mt-1.5"}><SvgIcon icon={props.icon} width={props.social ? 44 : 64} /></div>
+    </div>
+    <div className="ml-4 text-sm leading-none truncate">{props.social ? <><span className='font-bold'>{props.label}</span> - WiPayOfficial</> : props.label}</div>
 </div>
 
 const HowItWorksPage: NextPageWithLayout = () => {
@@ -80,16 +82,16 @@ const HowItWorksPage: NextPageWithLayout = () => {
                 </section>
 
                 <section className="mt-12">
-                    <div className="rounded-[35px] bg-black/20 pt-[53px] px-8 pb-[35px]">
-                        <h3 className="text-[25px] font-bold text-white/90">Have questions ?</h3>
+                    <div className="rounded-[35px] bg-black/20 pt-[53px] px-8 pb-[43px]">
+                        <h3 className="text-[25px] font-bold text-white/90 leading-none">Have questions ?</h3>
 
                         <p className="mt-8">
                             Feel free to contact us with any problems. We will get back to you as soon as possible.
                         </p>
 
-                        <div className="mt-[100px]">
+                        <div className="mt-[55px]">
                             <button className="h-[61px] pl-[35px] pr-[19.5px] bg-[#8EAD12] rounded-[14px] inline-flex items-center justify-center">
-                                <div className="font-medium">Contact us</div>
+                                <div className="font-medium leading-none">Contact us</div>
                                 <div className='ml-3'><SvgIcon icon='paper-plane' width={24} /></div>
                             </button>
                         </div>

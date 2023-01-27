@@ -156,7 +156,7 @@ const NavItem = (item: { name: ReactNode, href: string, icon: (props: ComponentP
             </div>
         </div> : active ? <item.activeIcon /> : <item.icon />}
         {active && item.center ? blueCircle : null}
-        <span className={classNames("text-xs transition-all duration-200", item.center ? 'font-bold text-center' : '', active ? 'font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3982F0] to-[#9747FF]' : '')}>{item.name}</span>
+        <span className={classNames("text-xs text-center transition-all duration-200", item.center ? 'font-bold' : '', active ? 'font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3982F0] to-[#9747FF]' : '')}>{item.name}</span>
         {active ? item.center ? null : blueCircle : null}
     </Link>
 }
@@ -180,8 +180,10 @@ export default function Toolbar({ home }: ToolbarProps) {
             </div>
         </header>
 
-        <footer className="fixed w-full bottom-0 z-50 bg-white rounded-t-[20px] rounded-b-[1px] border border-[#61616166] h-[112px] flex items-center justify-center space-x-3">
-            {navItems.map(item => <NavItem key={item.href} {...item} />)}
+        <footer className="fixed w-full bottom-0 z-50 bg-white rounded-t-[20px] rounded-b-[1px] border border-[#61616166]">
+            <div className='h-[112px] container flex items-center justify-between'>
+                {navItems.map(item => <NavItem key={item.href} {...item} />)}
+            </div>
         </footer>
     </>
 }
